@@ -196,7 +196,11 @@ module GoodData
                       key: 'enableEtlComponent',
                       value: true
                     }
-
+        client.post "/gdc/projects/#{project.pid}/projectFeatureFlags",
+                    featureFlag: {
+                      key: 'flag1',
+                      value: true
+                    }
         save(data, options)
       end
 
